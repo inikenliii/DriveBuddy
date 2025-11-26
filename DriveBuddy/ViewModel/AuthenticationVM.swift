@@ -45,7 +45,6 @@ final class AuthenticationViewModel: ObservableObject {
             let users = try viewContext.fetch(request)
             if users.isEmpty {
                 let newUser = User(context: viewContext)
-                // Pastikan user_id disimpan sebagai UUID
                 let newUserID = UUID()
                 
                 newUser.user_id = newUserID
